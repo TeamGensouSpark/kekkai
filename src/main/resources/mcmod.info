@@ -1,0 +1,16 @@
+[
+{
+  "modid": "untitled",
+  "name": "LunarCapital Framework",
+  "description": "A modding framework presented by TeamGensouSpark based on IDF & TDE",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [""],
+  "credits": "Idealland,CleanRoomMC",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
