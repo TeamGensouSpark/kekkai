@@ -213,7 +213,7 @@ task initembedJar(type:Copy){
     def tempdir = "embed-tmp";
     def embeddir = "embed-jar"
     
-    def mainJar = 'build/libs' archivesBaseName + version + '.jar'
+    def mainJar = 'build/libs/' + archivesBaseName +'-'+ version + '.jar'
     // mk a dir to process
     println "Make the dir " + tempdir;
     def tmpdir = new File(tempdir);
