@@ -6,6 +6,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
+import io.github.teamgensouspark.kekkai.proxy.CommonProxy;
 import io.github.teamgensouspark.kekkai.proxy.Const;
 
 @Mod(
@@ -24,6 +25,5 @@ public class Kekkai {
     public static void PreInit(FMLPreInitializationEvent event)
     {
         logger=event.getModLog();
-        ModReg.preInitRegistries();
     }
 }

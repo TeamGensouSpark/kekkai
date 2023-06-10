@@ -222,7 +222,7 @@ task initembedJar(type:Copy){
     def alljar = fileTree(dir:embeddir,includes:['*jar'])
     duplicatesStrategy(DuplicatesStrategy.INCLUDE)
     //Unpack Jar to class
-    for (jarpath:alljar){
+    for (jarpath in alljar){
         println 'Unpack ' + jarpath
         def zipFile = file(jarpath)
         def outputDir = file(tempdir)
