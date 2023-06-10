@@ -1,7 +1,7 @@
 
 <div align=center>
-  <img width=200 src="./doc/kekkai520x.png"  alt="image"/>
-  <h1 align="center">RanBot</h1> 
+  <img width=200 src="./doc/kekkai.png"  alt="image"/>
+  <h1 align="center">Kekkai</h1> 
 </div>
 
 ## Notice
