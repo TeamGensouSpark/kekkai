@@ -1,14 +1,14 @@
 [
 {
-  "modid": "untitled",
-  "name": "LunarCapital Framework",
-  "description": "A modding framework presented by TeamGensouSpark based on IDF & TDE",
+  "modid": "kekkai",
+  "name": "Kekkai",
+  "description": "Just a lib for touhou lovers",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "https://github.com/TeamGensouSpark/kekkai",
   "updateUrl": "",
-  "authorList": [""],
-  "credits": "Idealland,CleanRoomMC",
+  "authorList": ["H2Sxxa"],
+  "credits": "TeamGensouSpark,TeamNightclipse",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
