@@ -1,7 +1,7 @@
 import org.jetbrains.gradle.ext.Gradle
 
 plugins {
-    id 'com.github.johnrengelman.shadow' version '8.1.1'
+    // id 'com.github.johnrengelman.shadow' version '8.1.1'
     id 'java'
     id 'java-library'
     id 'maven-publish'
@@ -122,6 +122,7 @@ dependencies {
     }
 
     implementation fileTree(dir:"dependencies-jar",includes:['*jar'])
+    implementation fileTree(dir:"embed-jar",includes:['*jar'])
 }
 
 // Adds Access Transformer files to tasks
@@ -206,4 +207,35 @@ idea {
 
 tasks.named("processIdeaSettings").configure {
     dependsOn("injectTags")
+}
+
+task initembedJar(type:Copy){
+    def tempdir = "embed-tmp";
+    def embeddir = "embed-jar"
+    
+    def mainJar = 'build/libs' archivesBaseName + version + '.jar'
+    // mk a dir to process
+    println "Make the dir " + tempdir;
+    def tmpdir = new File(tempdir);
+    tmpdir.mkdir()
+
+    def alljar = fileTree(dir:embeddir,includes:['*jar'])
+    duplicatesStrategy(DuplicatesStrategy.INCLUDE)
+    //Unpack Jar to class
+    for (jarpath:alljar){
+        println 'Unpack ' + jarpath
+        def zipFile = file(jarpath)
+        def outputDir = file(tempdir)
+        FileTree jarTree = zipTree(zipFile)
+        from jarTree
+        into outputDir
+    }
+
+    // input Mainjar
+    println 'Unpack ' + mainJar
+    def zipFile = file(mainJar)
+    def outputDir = file(tempdir)
+    FileTree jarTree = zipTree(zipFile)
+    from jarTree
+    into outputDir
 }
