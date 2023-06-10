@@ -30,13 +30,13 @@ jobs:
         ./gradlew initembedJar
         cd embed-tmp
         jar -cvfM kekkai-all.jar .
-    - name: Upload build
+    - name: Upload kekkai-all
       uses: actions/upload-artifact@v3.1.2
       with:
         name: kekkai-all
         path: 'embed-tmp/kekkai-all.jar'
-    - name: Upload build
+    - name: Upload kekkai
       uses: actions/upload-artifact@v3.1.2
       with:
-        name: development
+        name: kekkai
         path: '**/build/libs/*.jar'
