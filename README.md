@@ -1,6 +1,8 @@
 
-
-![IMAGE HERE](./doc/kekkai520x.png)
+<div align=center>
+  <img width=200 src="./doc/kekkai520x.png"  alt="image"/>
+  <h1 align="center">RanBot</h1> 
+</div>
 
 ## Notice
 
