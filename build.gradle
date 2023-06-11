@@ -76,7 +76,6 @@ tasks.injectTags.configure {
     // Change Tags class' name here:
     outputClassName.set("${project.group}.${project.archives_base_name}.Tags")
 }
-
 repositories {
     maven {
         name 'CleanroomMC Maven'
@@ -210,20 +209,21 @@ tasks.named("processIdeaSettings").configure {
 }
 
 task initembedJar(type:Copy){
+    group 'embedJar'
+    description 'do the pre work...'
+
     def tempdir = "embed-tmp";
     def embeddir = "embed-jar"
-    
     def mainJar = 'build/libs/' + archivesBaseName +'-'+ version + '.jar'
-    // mk a dir to process
-    println "Make the dir " + tempdir;
-    def tmpdir = new File(tempdir);
-    tmpdir.mkdir()
-
     def alljar = fileTree(dir:embeddir,includes:['*jar'])
+
+    // mk a dir to process
+    new File(tempdir).mkdir();
+
+
     duplicatesStrategy(DuplicatesStrategy.INCLUDE)
     //Unpack Jar to class
     for (jarpath in alljar){
-        println 'Unpack ' + jarpath
         def zipFile = file(jarpath)
         def outputDir = file(tempdir)
         FileTree jarTree = zipTree(zipFile)
@@ -232,10 +232,10 @@ task initembedJar(type:Copy){
     }
 
     // input Mainjar
-    println 'Unpack ' + mainJar
     def zipFile = file(mainJar)
     def outputDir = file(tempdir)
     FileTree jarTree = zipTree(zipFile)
     from jarTree
     into outputDir
+
 }
