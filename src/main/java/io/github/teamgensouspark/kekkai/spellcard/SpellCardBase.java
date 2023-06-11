@@ -3,6 +3,7 @@ package io.github.teamgensouspark.kekkai.spellcard;
 import java.lang.reflect.Constructor;
 
 import io.github.teamgensouspark.kekkai.Kekkai;
+import io.github.teamgensouspark.kekkai.register.RegisterInit;
 import net.katsstuff.teamnightclipse.danmakucore.entity.living.TouhouCharacter;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.EntitySpellcard;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
@@ -23,7 +24,7 @@ public class SpellCardBase<T extends SpellcardEntity> extends Spellcard {
         this.character=character;
         this.spellcard=spellcard;
 
-        //ModSpellCard.SPELL_CARDS.add(this);
+        RegisterInit.SPELL_CARDS.add(this);
     }
     
     @Override
