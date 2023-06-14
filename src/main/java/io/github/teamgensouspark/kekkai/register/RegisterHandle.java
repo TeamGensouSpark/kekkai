@@ -20,7 +20,6 @@ public class RegisterHandle {
     }
     @SubscribeEvent
     public static void onSpellCardRegister(RegistryEvent.Register<Spellcard> event){
-        Kekkai.logger.info(RegisterInit.SPELL_CARDS);
         event.getRegistry().registerAll(RegisterInit.SPELL_CARDS.toArray(new Spellcard[0]));
     }
 

@@ -4,14 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.github.teamgensouspark.kekkai.example.MySpellCardEntity;
+import io.github.teamgensouspark.kekkai.item.ItemBase;
 import io.github.teamgensouspark.kekkai.spellcard.SpellCardBase;
 import net.katsstuff.teamnightclipse.danmakucore.entity.living.TouhouCharacter;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 public class RegisterInit {
     public static final List<Spellcard> SPELL_CARDS = new ArrayList<>();
     public static final List<Item> ITEMS = new ArrayList<>();
 
+    //public static final Item TEST_ITEM = new ItemBase("test_item", CreativeTabs.FOOD);
     public static final Spellcard EXAMPLE_CARD = new SpellCardBase<>("example_card", MySpellCardEntity.class, TouhouCharacter.REIMU_HAKUREI);
 }

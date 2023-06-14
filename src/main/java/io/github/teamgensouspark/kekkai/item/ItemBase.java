@@ -15,9 +15,10 @@ public class ItemBase extends Item implements IHasModel {
 
         RegisterInit.ITEMS.add(this);
     }
+
+
     @Override
     public void registerModels() {
         Kekkai.proxy.registerItemRenderer(this, 0, "inventory");
     }
-
 }
