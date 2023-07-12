@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 
 import io.github.teamgensouspark.kekkai.proxy.CommonProxy;
 import io.github.teamgensouspark.kekkai.proxy.Const;
+import io.github.teamgensouspark.kekkai.register.RegisterHandle;
 
 @Mod(
     modid = Const.MODID,
@@ -25,5 +26,6 @@ public class Kekkai {
     public static void PreInit(FMLPreInitializationEvent event)
     {
         logger=event.getModLog();
+        RegisterHandle.preInitRegistries();
     }
 }

@@ -1,5 +1,6 @@
 package io.github.teamgensouspark.kekkai.register;
 
+import io.github.teamgensouspark.kekkai.Kekkai;
 import io.github.teamgensouspark.kekkai.interfaces.IHasModel;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
 import net.minecraft.item.Item;
@@ -11,8 +12,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @EventBusSubscriber
 public class RegisterHandle {
 
-    public static void preInitRegistries(){
-    }
+    public static void preInitRegistries(){}
 
     @SubscribeEvent
     public static void onItemRegister(RegistryEvent.Register<Item> event) {
