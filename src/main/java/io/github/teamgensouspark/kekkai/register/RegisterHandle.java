@@ -1,6 +1,5 @@
 package io.github.teamgensouspark.kekkai.register;
 
-import io.github.teamgensouspark.kekkai.Kekkai;
 import io.github.teamgensouspark.kekkai.interfaces.IHasModel;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
 import net.minecraft.item.Item;

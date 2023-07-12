@@ -4,11 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.github.teamgensouspark.kekkai.example.MySpellCardEntity;
-import io.github.teamgensouspark.kekkai.item.ItemBase;
 import io.github.teamgensouspark.kekkai.spellcard.SpellCardBase;
 import net.katsstuff.teamnightclipse.danmakucore.entity.living.TouhouCharacter;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 public class RegisterInit {

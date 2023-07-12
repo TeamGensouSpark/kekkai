@@ -8,10 +8,11 @@ import net.katsstuff.teamnightclipse.danmakucore.entity.living.TouhouCharacter;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.EntitySpellcard;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.SpellcardEntity;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.EntityLivingBase;
 import scala.Option;
 
-public class SpellCardBase<T extends SpellcardEntity> extends Spellcard {
+public class SpellCardBase<T extends SpellcardEntity> extends Spellcard{
     int level = 1;
     int removeTime = 50;
     int endTime = 50;
@@ -75,5 +76,10 @@ public class SpellCardBase<T extends SpellcardEntity> extends Spellcard {
     @Override
     public TouhouCharacter touhouUser() {
         return this.character;
+    }
+
+    @Override
+    public ModelResourceLocation itemModel() {
+        return new ModelResourceLocation(this.getRegistryName(),"inventory");
     }
 }
