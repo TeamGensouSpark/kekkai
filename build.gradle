@@ -92,7 +92,7 @@ repositories {
             includeGroup 'curse.maven'
         }
     }
-    if (project.use_mirror) {
+    if (project.use_mirror.toBoolean()) {
         removeIf {
             it instanceof MavenArtifactRepository &&
                 (it.url.toString() == "https://repo.maven.apache.org/maven2/")
