@@ -48,7 +48,7 @@ public class TouhouExCharacter {
     public static final TouhouCharacter TAKANE_YAMASHIRO = TouhouCharacter.getOrCreate("TAKANE_YAMASHIRO", "takane",
             TouhouExSpecies.YOUKAI_YAMAWARO);
     public static final TouhouCharacter SANNYO_KOMAKUSA = TouhouCharacter.getOrCreate("SANNYO_KOMAKUSA", "sannyo",
-            TouhouExSpecies.YOUKAI_YAMAJAROU);
+            TouhouExSpecies.YOUKAI_YAMAJOROU);
     public static final TouhouCharacter MISUMARU_TAMATSUKURI = TouhouCharacter.getOrCreate("MISUMARU_TAMATSUKURI",
             "misumaru", TouhouSpecies.GOD);
     public static final TouhouCharacter TSUKASA_KUDAMAKI = TouhouCharacter.getOrCreate("TSUKASA_KUDAMAKI", "tsukasa",
