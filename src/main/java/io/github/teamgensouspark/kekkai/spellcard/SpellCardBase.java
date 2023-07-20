@@ -3,16 +3,14 @@ package io.github.teamgensouspark.kekkai.spellcard;
 import java.lang.reflect.Constructor;
 
 import io.github.teamgensouspark.kekkai.Kekkai;
-import io.github.teamgensouspark.kekkai.register.RegisterInit;
 import net.katsstuff.teamnightclipse.danmakucore.entity.living.TouhouCharacter;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.EntitySpellcard;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.SpellcardEntity;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.EntityLivingBase;
 import scala.Option;
 
-public class SpellCardBase<T extends SpellcardEntity> extends Spellcard{
+public abstract class SpellCardBase<T extends SpellcardEntity> extends Spellcard{
     int level = 1;
     int removeTime = 50;
     int endTime = 50;
@@ -24,8 +22,6 @@ public class SpellCardBase<T extends SpellcardEntity> extends Spellcard{
         this.name=name;
         this.character=character;
         this.spellcard=spellcard;
-
-        RegisterInit.SPELL_CARDS.add(this);
     }
     
     @Override
@@ -76,10 +72,5 @@ public class SpellCardBase<T extends SpellcardEntity> extends Spellcard{
     @Override
     public TouhouCharacter touhouUser() {
         return this.character;
-    }
-
-    @Override
-    public ModelResourceLocation itemModel() {
-        return new ModelResourceLocation(this.getRegistryName(),"inventory");
     }
 }

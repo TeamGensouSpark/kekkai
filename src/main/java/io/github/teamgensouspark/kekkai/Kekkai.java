@@ -6,14 +6,13 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
+import io.github.teamgensouspark.kekkai.example.MySpellCards;
 import io.github.teamgensouspark.kekkai.proxy.CommonProxy;
-import io.github.teamgensouspark.kekkai.proxy.Const;
-import io.github.teamgensouspark.kekkai.register.RegisterHandle;
 
 @Mod(
-    modid = Const.MODID,
-    name = Const.NAME,
-    version = Const.VERSION,
+    modid = Consts.MODID,
+    name = Consts.NAME,
+    version = Consts.VERSION,
     dependencies = "required-after:mirror@[0.4.0,);required-after:danmakucore"
 )
 public class Kekkai {
@@ -26,6 +25,6 @@ public class Kekkai {
     public static void PreInit(FMLPreInitializationEvent event)
     {
         logger=event.getModLog();
-        RegisterHandle.preInitRegistries();
+        MySpellCards.initSpellCard();
     }
 }

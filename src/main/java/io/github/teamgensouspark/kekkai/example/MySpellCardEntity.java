@@ -1,6 +1,7 @@
 package io.github.teamgensouspark.kekkai.example;
 
 
+import io.github.teamgensouspark.kekkai.Kekkai;
 import io.github.teamgensouspark.kekkai.danmaku.DanmakuHelper;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.EntitySpellcard;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;

@@ -1,12 +1,44 @@
 package io.github.teamgensouspark.kekkai.example;
 
-import io.github.teamgensouspark.kekkai.proxy.Const;
-import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
-import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.SpellcardDummy;
-import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
+import java.util.ArrayList;
+import java.util.List;
 
-@ObjectHolder(Const.MODID)
+import io.github.teamgensouspark.kekkai.Consts;
+import io.github.teamgensouspark.kekkai.character.TouhouExCharacter;
+import io.github.teamgensouspark.kekkai.spellcard.SpellCardBase;
+import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
+import net.katsstuff.teamnightclipse.danmakucore.item.ItemSpellcard;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+@EventBusSubscriber(modid = Consts.MODID)
 public class MySpellCards {
-    @ObjectHolder("example_card")
-    public static final Spellcard EXAMPLE_CARD = SpellcardDummy.instance();
+    public static void initSpellCard() {
+    };
+
+    public static final List<Spellcard> SPELL_CARDS = new ArrayList<>();
+
+    public static final Spellcard EXAMPLE_CARD = new MySpellCardBase<>("example_card",
+            MySpellCardEntity.class,
+            TouhouExCharacter.MEGUMU_IIZUNAMARU);
+
+    @SubscribeEvent
+    public static void onSpellCardRegister(RegistryEvent.Register<Spellcard> event) {
+        event.getRegistry().registerAll(SPELL_CARDS.toArray(new Spellcard[0]));
+    }
+
+    @SubscribeEvent
+    public static void onModelRegister(ModelRegistryEvent event){
+        for (Spellcard sp: SPELL_CARDS){
+            ModelLoader.setCustomModelResourceLocation(
+                ItemSpellcard.createStack(sp).getItem(),
+                ItemSpellcard.createStack(sp).getMetadata(),
+                sp.itemModel()
+            );
+        }
+    }
+
 }
