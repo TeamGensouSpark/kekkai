@@ -1,6 +1,6 @@
 {
-    "parent": "danmakucore:item/danmaku/spellcard/spellcard_base",
+    "parent": "item/generated",
     "textures": {
-      "1": "kekkai:items/spellcard/example_card"
+      "layer0": "kekkai:items/spellcard/example_card"
     }
   }
