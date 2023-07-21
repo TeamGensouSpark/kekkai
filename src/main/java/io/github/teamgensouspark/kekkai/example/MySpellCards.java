@@ -29,16 +29,4 @@ public class MySpellCards {
     public static void onSpellCardRegister(RegistryEvent.Register<Spellcard> event) {
         event.getRegistry().registerAll(SPELL_CARDS.toArray(new Spellcard[0]));
     }
-
-    @SubscribeEvent
-    public static void onModelRegister(ModelRegistryEvent event){
-        for (Spellcard sp: SPELL_CARDS){
-            ModelLoader.setCustomModelResourceLocation(
-                ItemSpellcard.createStack(sp).getItem(),
-                ItemSpellcard.createStack(sp).getMetadata(),
-                sp.itemModel()
-            );
-        }
-    }
-
 }
