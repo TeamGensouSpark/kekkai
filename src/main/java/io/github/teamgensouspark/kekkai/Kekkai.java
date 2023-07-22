@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 
 import io.github.teamgensouspark.kekkai.example.MySpellCards;
 import io.github.teamgensouspark.kekkai.proxy.CommonProxy;
+import io.github.teamgensouspark.kekkai.spellcard.SpellCardModelHelper;
 
 @Mod(
     modid = Consts.MODID,
@@ -25,6 +26,7 @@ public class Kekkai {
     public static void PreInit(FMLPreInitializationEvent event)
     {
         logger=event.getModLog();
+        SpellCardModelHelper.initSpellCardBake();
         MySpellCards.initSpellCard();
     }
 }

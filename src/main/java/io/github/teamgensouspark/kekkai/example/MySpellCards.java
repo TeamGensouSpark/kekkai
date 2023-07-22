@@ -5,11 +5,7 @@ import java.util.List;
 
 import io.github.teamgensouspark.kekkai.Consts;
 import io.github.teamgensouspark.kekkai.character.TouhouExCharacter;
-import io.github.teamgensouspark.kekkai.spellcard.SpellCardBase;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
-import net.katsstuff.teamnightclipse.danmakucore.item.ItemSpellcard;
-import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -29,4 +25,5 @@ public class MySpellCards {
     public static void onSpellCardRegister(RegistryEvent.Register<Spellcard> event) {
         event.getRegistry().registerAll(SPELL_CARDS.toArray(new Spellcard[0]));
     }
+
 }

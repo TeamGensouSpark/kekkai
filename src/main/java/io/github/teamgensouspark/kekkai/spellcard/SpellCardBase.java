@@ -22,6 +22,7 @@ public abstract class SpellCardBase<T extends SpellcardEntity> extends Spellcard
         this.name=name;
         this.character=character;
         this.spellcard=spellcard;
+        SpellCardModelHelper.BAKE_SPELLCARDS.add(this);
     }
     
     @Override
