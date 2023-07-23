@@ -25,16 +25,10 @@ jobs:
         chmod +x gradlew
 
     - name: Build with Gradle
-      run: |
-        ./gradlew build
-        ./gradlew initembedJar
-        cd embed-tmp
-        jar -cvfM kekkai-all.jar .
-    - name: Upload kekkai-all
-      uses: actions/upload-artifact@v3.1.2
+      uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
       with:
-        name: kekkai-all
-        path: 'embed-tmp/kekkai-all.jar'
+        arguments: build
+
     - name: Upload kekkai
       uses: actions/upload-artifact@v3.1.2
       with:

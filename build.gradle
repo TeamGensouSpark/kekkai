@@ -138,7 +138,11 @@ dependencies {
     }
 
     implementation fileTree(dir:"dependencies-jar",includes:['*jar'])
-    implementation fileTree(dir:"embed-jar",includes:['*jar'])
+    if (project.do_embed.toBoolean()){
+        embed fileTree(dir:"embed-jar",includes:['*jar'])
+    }else{
+        implementation fileTree(dir:"embed-jar",includes:['*jar'])
+    }
 }
 
 // Adds Access Transformer files to tasks
@@ -171,6 +175,7 @@ processResources {
 }
 
 jar {
+    duplicatesStrategy(DuplicatesStrategy.INCLUDE)
     manifest {
         def attribute_map = [:]
         if (project.use_coremod.toBoolean()) {
@@ -223,54 +228,4 @@ idea {
 
 tasks.named("processIdeaSettings").configure {
     dependsOn("injectTags")
-}
-
-publishing {
-    repositories {
-        maven {
-            name = "Kekkai"
-            url = uri("https://maven.pkg.github.com/TeamGensouSpark/kekkai")
-            credentials {
-                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
-            }
-        }
-    }
-    publications {
-        gpr(MavenPublication) {
-            from(components.java)
-        }
-    }
-}
-
-task initembedJar(type:Copy){
-    group 'embedJar'
-    description 'do the pre work...'
-
-    def tempdir = "embed-tmp";
-    def embeddir = "embed-jar"
-    def mainJar = 'build/libs/' + archivesBaseName +'-'+ version + '.jar'
-    def alljar = fileTree(dir:embeddir,includes:['*jar'])
-
-    // mk a dir to process
-    new File(tempdir).mkdir();
-
-
-    duplicatesStrategy(DuplicatesStrategy.INCLUDE)
-    //Unpack Jar to class
-    for (jarpath in alljar){
-        def zipFile = file(jarpath)
-        def outputDir = file(tempdir)
-        FileTree jarTree = zipTree(zipFile)
-        from jarTree
-        into outputDir
-    }
-
-    // input Mainjar
-    def zipFile = file(mainJar)
-    def outputDir = file(tempdir)
-    FileTree jarTree = zipTree(zipFile)
-    from jarTree
-    into outputDir
-
 }
