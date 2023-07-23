@@ -1,7 +1,7 @@
 package io.github.teamgensouspark.kekkai.example;
 
 
-import io.github.teamgensouspark.kekkai.danmaku.DanmakuHelper;
+import io.github.teamgensouspark.kekkai.danmaku.DanmakuBuilder;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.EntitySpellcard;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.SpellcardEntity;
@@ -21,7 +21,7 @@ public class MySpellCardEntity extends SpellcardEntity{
     public void onSpellcardUpdate() {
         DanmakuCreationHelper.createWideShot(
             Quat.orientationOf(this.user()),
-            DanmakuHelper.get_builder_e(this.user())
+            DanmakuBuilder.getBuilderWithEntity(this.user())
             .setShot(LibShotData.SHOT_CIRCLE.setSize(1.5F))
             .build(),
             2,
