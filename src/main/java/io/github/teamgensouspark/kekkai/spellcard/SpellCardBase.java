@@ -10,7 +10,7 @@ import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.SpellcardEntit
 import net.minecraft.entity.EntityLivingBase;
 import scala.Option;
 
-public abstract class SpellCardBase<T extends SpellcardEntity> extends Spellcard{
+public class SpellCardBase<T extends SpellcardEntity> extends Spellcard{
     int level = 1;
     int removeTime = 50;
     int endTime = 50;
@@ -73,5 +73,10 @@ public abstract class SpellCardBase<T extends SpellcardEntity> extends Spellcard
     @Override
     public TouhouCharacter touhouUser() {
         return this.character;
+    }
+
+    public Spellcard setTouhouUser(TouhouCharacter character){
+        this.character= character;
+        return this;
     }
 }
