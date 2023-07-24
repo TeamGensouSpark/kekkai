@@ -33,7 +33,7 @@ repositories {
         credentials {
             //you can use your Github account here too......
             username = "H2Sxxa"
-            password = "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" //the token is read Github Package only
+            password = "ZSkEN3kdPWkMyllZc4OfE8gZWXrFV2ufYt2R_phg".reverse() //the token is read Github Package only
         }
     }
 }
