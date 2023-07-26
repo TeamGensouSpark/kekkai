@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.github.teamgensouspark.kekkai.Consts;
+import io.github.teamgensouspark.kekkai.Kekkai;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -30,7 +31,11 @@ public class SpellCardModelHelper {
     @SubscribeEvent
     public static void onModelRegister(ModelRegistryEvent event) {
         for (Spellcard sp : BAKE_SPELLCARDS) {
-            ModelLoader.setCustomModelResourceLocation(SPELLCARD_HELPER, 0, sp.itemModel());
+            try {
+                ModelLoader.setCustomModelResourceLocation(SPELLCARD_HELPER, 0, sp.itemModel());
+            } catch (Exception e) {
+                Kekkai.logger.warn(e.toString());
+            }
         }
     }
 }
