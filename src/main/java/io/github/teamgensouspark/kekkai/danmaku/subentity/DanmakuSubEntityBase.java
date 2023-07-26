@@ -1,4 +1,4 @@
-package io.github.teamgensouspark.kekkai.danmaku;
+package io.github.teamgensouspark.kekkai.danmaku.subentity;
 
 import net.katsstuff.teamnightclipse.danmakucore.danmaku.DanmakuState;
 import net.katsstuff.teamnightclipse.danmakucore.danmaku.DanmakuUpdate;

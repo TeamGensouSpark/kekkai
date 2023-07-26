@@ -1,4 +1,4 @@
-package io.github.teamgensouspark.kekkai.danmaku;
+package io.github.teamgensouspark.kekkai.danmaku.form;
 
 import net.katsstuff.teamnightclipse.danmakucore.client.helper.DanCoreRenderHelper;
 import net.katsstuff.teamnightclipse.danmakucore.danmaku.DanmakuState;
