@@ -7,7 +7,7 @@ plugins {
     id 'maven-publish'
     id 'org.jetbrains.gradle.plugin.idea-ext' version '1.1.7'
     id 'eclipse'
-    id 'com.gtnewhorizons.retrofuturagradle' version '1.3.19'
+    id 'com.gtnewhorizons.retrofuturagradle' version '1.3.21'
     id 'com.matthewprenger.cursegradle' version '1.4.0'
 }
 
@@ -192,6 +192,24 @@ jar {
     }
     // Add all embedded dependencies into the jar
     from(provider{ configurations.embed.collect {it.isDirectory() ? it : zipTree(it)} })
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "Kekkai"
+            url = uri("https://maven.pkg.github.com/TeamGensouSpark/kekkai")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+            }
+        }
+    }
+    publications {
+        gpr(MavenPublication) {
+            from(components.java)
+        }
+    }
 }
 
 idea {
