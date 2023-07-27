@@ -10,6 +10,7 @@ import io.github.teamgensouspark.kekkai.example.MySpellCards;
 import io.github.teamgensouspark.kekkai.proxy.CommonProxy;
 import io.github.teamgensouspark.kekkai.spellcard.SpellCardModelHelper;
 import io.github.teamgensouspark.kekkai.utils.KekkaiRegister;
+import io.github.teamgensouspark.kekkai.utils.ModResource;
 
 @Mod(
     modid = Consts.MODID,
@@ -19,7 +20,8 @@ import io.github.teamgensouspark.kekkai.utils.KekkaiRegister;
 )
 public class Kekkai {
     public static Logger logger;
-
+    
+    public static ModResource resource = new ModResource(Consts.MODID);
 
     @SidedProxy(clientSide = "io.github.teamgensouspark.kekkai.proxy.ClientProxy", serverSide = "io.github.teamgensouspark.kekkai.proxy.CommonProxy")
     public static CommonProxy proxy;
