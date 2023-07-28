@@ -17,7 +17,7 @@ public class TouhouExSpecies {
             TouhouSpecies.YOUKAI);
     public static final TouhouSpecies YOUKAI_KUROKOMA = TouhouSpecies.getOrCreate("YOUKAI_KUROKOMA",
             TouhouSpecies.YOUKAI);
-    public static final TouhouSpecies JIDAO = TouhouSpecies.getOrCreate("JIDIAO",
+    public static final TouhouSpecies JIDIAO = TouhouSpecies.getOrCreate("JIDIAO",
             (TouhouSpecies) null);
     public static final TouhouSpecies HANIWA = TouhouSpecies.getOrCreate("HANIWA",
             (TouhouSpecies) null);
