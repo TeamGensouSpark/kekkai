@@ -11,7 +11,7 @@ public class TouhouExSpecies {
             TouhouSpecies.YOUKAI);
     public static final TouhouSpecies FAIRY_SWALLOWTAIL = TouhouSpecies.getOrCreate("FAIRY_SWALLOWTAIL",
             TouhouSpecies.FAIRY);
-    public static final TouhouSpecies YOUKAI_YAMABA = TouhouSpecies.getOrCreate("YOUKAI_YAMABA",
+    public static final TouhouSpecies YOUKAI_YAMANBA = TouhouSpecies.getOrCreate("YOUKAI_YAMANBA",
             TouhouSpecies.YOUKAI);
     public static final TouhouSpecies YOUKAI_KOMAINU = TouhouSpecies.getOrCreate("YOUKAI_KOMAINU",
             TouhouSpecies.YOUKAI);
