@@ -42,6 +42,11 @@ dependencies {
     implementation 'io.github.teamgensouspark.kekkai:kekkai:1.0-rc3' //change version yourself
 }
 ```
+## Help & Improvement
+
+You can use the issue to give me your idea,don't mind,if I have time,I will reply.
+
+对于国内用户欢迎加入QQ群752204159谢谢喵~
 
 ## Credits
 
