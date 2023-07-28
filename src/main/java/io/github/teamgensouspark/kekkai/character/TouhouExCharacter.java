@@ -13,7 +13,7 @@ public class TouhouExCharacter {
     public static final TouhouCharacter LARVA_ETERNITY = TouhouCharacter.getOrCreate("LARVA_ETERNITY", "larva",
             TouhouExSpecies.FAIRY_SWALLOWTAIL);
     public static final TouhouCharacter NEMUNO_SAKATA = TouhouCharacter.getOrCreate("NEMUNO_SAKATA", "numuno",
-            TouhouExSpecies.YOUKAI_YAMABA);
+            TouhouExSpecies.YOUKAI_YAMANBA);
     public static final TouhouCharacter AUNN_KOMANO = TouhouCharacter.getOrCreate("AUNN_KOMANO", "aunn",
             TouhouExSpecies.YOUKAI_KOMAINU);
     public static final TouhouCharacter NARUMI_YATADERA = TouhouCharacter.getOrCreate("NARUMI_YATADERA", "narumi",
@@ -32,7 +32,7 @@ public class TouhouExCharacter {
     public static final TouhouCharacter KUTAKA_NIWATARI = TouhouCharacter.getOrCreate("KUTAKA_NIWATARI", "kutaka",
             TouhouSpecies.GOD);
     public static final TouhouCharacter YACHIE_KITCHO = TouhouCharacter.getOrCreate("YACHIE_KITCHO", "yachie",
-            TouhouExSpecies.JIDAO);
+            TouhouExSpecies.JIDIAO);
     public static final TouhouCharacter MAYUMI_JOUTOGU = TouhouCharacter.getOrCreate("MAYUMI_JOUTOGU", "mayumi",
             TouhouExSpecies.HANIWA);
     public static final TouhouCharacter KEIKI_HANIYASUSHIN = TouhouCharacter.getOrCreate("KEIKI_HANIYASUSHIN", "keiki",
