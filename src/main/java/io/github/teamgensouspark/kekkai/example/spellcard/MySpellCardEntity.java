@@ -1,4 +1,4 @@
-package io.github.teamgensouspark.kekkai.example;
+package io.github.teamgensouspark.kekkai.example.spellcard;
 
 
 import io.github.teamgensouspark.kekkai.danmaku.DanmakuBuilder;
@@ -6,6 +6,7 @@ import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.EntitySpellcar
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.SpellcardEntity;
 import net.katsstuff.teamnightclipse.danmakucore.javastuff.DanmakuCreationHelper;
+import net.katsstuff.teamnightclipse.danmakucore.lib.LibColor;
 import net.katsstuff.teamnightclipse.danmakucore.lib.data.LibShotData;
 import net.katsstuff.teamnightclipse.mirror.data.Quat;
 import net.minecraft.entity.EntityLivingBase;
@@ -22,10 +23,10 @@ public class MySpellCardEntity extends SpellcardEntity{
         DanmakuCreationHelper.createWideShot(
             Quat.orientationOf(this.user()),
             DanmakuBuilder.getBuilderWithEntity(this.user())
-            .setShot(LibShotData.SHOT_CIRCLE.setSize(1.5F))
+            .setShot(LibShotData.SHOT_HEART_CARD.setMainColor(LibColor.COLOR_VANILLA_PINK))
             .build(),
-            2,
-            15,
+            3,
+            3,
             0,
             1F);
         return;

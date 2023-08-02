@@ -1,4 +1,4 @@
-package io.github.teamgensouspark.kekkai.example;
+package io.github.teamgensouspark.kekkai.example.spellcard;
 
 import java.util.ArrayList;
 import java.util.List;

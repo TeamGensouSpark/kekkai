@@ -1,4 +1,4 @@
-package io.github.teamgensouspark.kekkai.example;
+package io.github.teamgensouspark.kekkai.example.spellcard;
 
 import io.github.teamgensouspark.kekkai.spellcard.SpellCardBase;
 import net.katsstuff.teamnightclipse.danmakucore.entity.living.TouhouCharacter;
