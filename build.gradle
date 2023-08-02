@@ -37,7 +37,7 @@ configurations {
 }
 
 minecraft {
-    mcVersion = '1.12.2'
+    mcVersion = '1.12.2-14.23.5.2768'
 
     // MCP Mappings
     mcpMappingChannel = 'stable'
