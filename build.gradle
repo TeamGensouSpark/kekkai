@@ -138,7 +138,7 @@ dependencies {
     }
 
     implementation fileTree(dir:"dependencies-jar",includes:['*jar'])
-    if (project.do_embed.toBoolean()){
+    if (project.do_embed.toBoolean() && project.gradle.startParameter.taskNames[0] == "build"){
         embed fileTree(dir:"embed-jar",includes:['*jar'])
     }else{
         implementation fileTree(dir:"embed-jar",includes:['*jar'])

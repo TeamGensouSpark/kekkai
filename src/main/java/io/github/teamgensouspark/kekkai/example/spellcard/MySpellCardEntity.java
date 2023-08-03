@@ -1,6 +1,6 @@
 package io.github.teamgensouspark.kekkai.example.spellcard;
 
-
+import io.github.teamgensouspark.kekkai.color.AtomColors;
 import io.github.teamgensouspark.kekkai.danmaku.DanmakuBuilder;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.EntitySpellcard;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
@@ -12,7 +12,7 @@ import net.katsstuff.teamnightclipse.mirror.data.Quat;
 import net.minecraft.entity.EntityLivingBase;
 import scala.Option;
 
-public class MySpellCardEntity extends SpellcardEntity{
+public class MySpellCardEntity extends SpellcardEntity {
 
     public MySpellCardEntity(Spellcard spellcard, EntitySpellcard cardEntity, Option<EntityLivingBase> target) {
         super(spellcard, cardEntity, target);
@@ -20,16 +20,17 @@ public class MySpellCardEntity extends SpellcardEntity{
 
     @Override
     public void onSpellcardUpdate() {
-        DanmakuCreationHelper.createWideShot(
-            Quat.orientationOf(this.user()),
-            DanmakuBuilder.getBuilderWithEntity(this.user())
-            .setShot(LibShotData.SHOT_HEART_CARD.setMainColor(LibColor.COLOR_VANILLA_PINK))
-            .build(),
-            3,
-            3,
-            0,
-            1F);
-        return;
+        if (time() % 5 == 0) {
+            DanmakuCreationHelper.createWideShot(
+                    Quat.orientationOf(this.user()),
+                    DanmakuBuilder.getBuilderWithEntity(this.user())
+                            .setShot(LibShotData.SHOT_MEDIUM.setMainColor(AtomColors.ATOM_COLOR_GREEN))
+                            .build(),
+                    1,
+                    2,
+                    0,
+                    1F);
+        }
     }
 
 }

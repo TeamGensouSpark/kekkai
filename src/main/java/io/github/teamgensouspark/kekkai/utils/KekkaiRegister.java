@@ -21,28 +21,34 @@ public class KekkaiRegister {
     public static final List<SubEntityType> KEKKAI_SUBENTITYTYPES = new ArrayList<>();
     public static final List<Form> KEKKAI_FORMS = new ArrayList<>();
 
-    public static void RegistSpellcard(Spellcard spellcard) {
+    public static Spellcard RegistSpellcard(Spellcard spellcard) {
         KEKKAI_SPELLCARDS.add(spellcard);
+        return spellcard;
     }
 
-    public static void RegistForm(Form form) {
+    public static Form RegistForm(Form form) {
         KEKKAI_FORMS.add(form);
+        return form;
     }
 
-    public static void RegistSubEntityType(SubEntityType subentity) {
+    public static SubEntityType RegistSubEntityType(SubEntityType subentity) {
         KEKKAI_SUBENTITYTYPES.add(subentity);
+        return subentity;
     }
 
-    public static void RegistSubEntityTypeAll(SubEntityType[] subentity) {
-        KEKKAI_SUBENTITYTYPES.addAll(Arrays.asList(subentity));
+    public static SubEntityType[] RegistSubEntityTypeAll(SubEntityType[] subentities) {
+        KEKKAI_SUBENTITYTYPES.addAll(Arrays.asList(subentities));
+        return subentities;
     }
 
-    public static void RegistFormAll(Form[] form) {
-        KEKKAI_FORMS.addAll(Arrays.asList(form));
+    public static Form[] RegistFormAll(Form[] forms) {
+        KEKKAI_FORMS.addAll(Arrays.asList(forms));
+        return forms;
     }
 
-    public static void RegistSpellcardAll(Spellcard[] spellcards) {
+    public static Spellcard[] RegistSpellcardAll(Spellcard[] spellcards) {
         KEKKAI_SPELLCARDS.addAll(Arrays.asList(spellcards));
+        return spellcards;
     }
 
     @SubscribeEvent
