@@ -7,7 +7,7 @@ plugins {
     id 'maven-publish'
     id 'org.jetbrains.gradle.plugin.idea-ext' version '1.1.7'
     id 'eclipse'
-    id 'com.gtnewhorizons.retrofuturagradle' version '1.3.21'
+    id 'com.gtnewhorizons.retrofuturagradle' version '1.3.24'
     id 'com.matthewprenger.cursegradle' version '1.4.0'
 }
 
@@ -92,7 +92,7 @@ repositories {
             includeGroup 'curse.maven'
         }
     }
-    if (project.use_mirror.toBoolean()) {
+    if (project.use_mirror.toBoolean() || project.gradle.startParameter.taskNames[0] == "MirrorSetup") {
         removeIf {
             it instanceof MavenArtifactRepository &&
                 (it.url.toString() == "https://repo.maven.apache.org/maven2/")
@@ -137,11 +137,11 @@ dependencies {
         }
     }
 
-    implementation fileTree(dir:"dependencies-jar",includes:['*jar'])
+    implementation fileTree(dir:project.implementation_folder,includes:['*jar'])
     if (project.do_embed.toBoolean() && project.gradle.startParameter.taskNames[0] == "build"){
-        embed fileTree(dir:"embed-jar",includes:['*jar'])
+        embed fileTree(dir:project.embed_folder,includes:['*jar'])
     }else{
-        implementation fileTree(dir:"embed-jar",includes:['*jar'])
+        implementation fileTree(dir:project.embed_folder,includes:['*jar'])
     }
 }
 
@@ -241,6 +241,12 @@ idea {
                 }
             }
         }
+    }
+}
+
+task MirrorSetup {
+    doLast {
+        println "Enable Mirror build"
     }
 }
 

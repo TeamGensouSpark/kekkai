@@ -1,7 +1,7 @@
-// from TDE
+//Based on tde
 pluginManagement {
     repositories {
-        if (use_mirror.toBoolean()) {
+        if (use_mirror.toBoolean() || gradle.startParameter.taskNames[0] == "MirrorSetup") {
             removeIf {
                 it instanceof MavenArtifactRepository &&
                     (it.url.toString() == "https://repo.maven.apache.org/maven2/")
@@ -29,8 +29,8 @@ pluginManagement {
             }
         }
         gradlePluginPortal()
-        mavenCentral()
         mavenLocal()
+        mavenCentral()
     }
 }
 
@@ -57,7 +57,7 @@ if (!file(System.getProperty('java.home') + javac).exists()) {
 if (!System.getProperty('java.version').startsWith("1.8.") || javaEdition == "RE") {
     """
 LISTEN: YOU ARE USEING THE [ J${javaEdition} ${System.getProperty('java.version')} ],PLEASE USE JDK 1.8 (NOT JRE 1.8),REMEMBER THAT JAVA_HOME MUST POINT TO JDK 1.8
-                            !!!! SEE https://h2sxxa.github.io/2022/10/16/mcforge1.12.2-0 !!!!
+                            !!!! SEE HOW TO CONFIGUTURE YOUR JAVA_HOME !!!!
     """.with {
         println it
         throw new RuntimeException(it)
