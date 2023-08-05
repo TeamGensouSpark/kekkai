@@ -41,3 +41,9 @@ jobs:
       env:
         USERNAME: ${{ github.actor }}
         TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Upload kekkai
+    uses: actions/upload-artifact@v3.1.2
+    with:
+      name: kekkai
+      path: '**/build/libs/*.jar'
