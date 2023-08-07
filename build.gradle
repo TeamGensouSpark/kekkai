@@ -117,7 +117,7 @@ dependencies {
         implementation 'com.cleanroommc:assetmover:2.5'
     }
     if (project.use_mixins.toBoolean()) {
-        implementation 'zone.rong:mixinbooter:7.1'
+        implementation 'zone.rong:mixinbooter:8.3'
     }
 
     // Example of deobfuscating a dependency

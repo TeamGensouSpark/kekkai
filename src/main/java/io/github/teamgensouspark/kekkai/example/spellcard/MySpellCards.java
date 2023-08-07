@@ -1,8 +1,5 @@
 package io.github.teamgensouspark.kekkai.example.spellcard;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import io.github.teamgensouspark.kekkai.character.TouhouExCharacter;
 import io.github.teamgensouspark.kekkai.spellcard.SpellCardBase;
 import io.github.teamgensouspark.kekkai.utils.KekkaiRegister;

@@ -13,6 +13,10 @@ public class ColorHelper {
         this.random = new Random();
     }
 
+    public List<Integer> getColors(){
+        return color_collection;
+    }
+
     public int registColorfromRGB(int red, int green, int blue) {
         int color = ColorHelper.createColorfromRGB(red, green, blue);
         this.color_collection.add(color);

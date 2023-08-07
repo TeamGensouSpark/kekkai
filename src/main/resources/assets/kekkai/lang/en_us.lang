@@ -1,4 +1,2 @@
-item.spellcard.spellcard.kekkai.example_card.name="Test SpellCard"
-spellcard.kekkai.example_card="Test SpellCard"
-
-item.test_item.name="TEST_ITEM"
+item.spellcard.spellcard.kekkai.example_card.name=Example SpellCard
+spellcard.kekkai.example_card=Example SpellCard
