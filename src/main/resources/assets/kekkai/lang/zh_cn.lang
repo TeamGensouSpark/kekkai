@@ -4,4 +4,4 @@ spellcard.kekkai.example_card=示例符卡
 kekkai.tooltip.spellcard.level=Lv.
 kekkai.tooltip.spellcard.char=符卡持有者  
 kekkai.tooltip.spellcard.removeTime=无敌时间 
-kekkai.tooltip.spellcard.endTime=无持续时间 
+kekkai.tooltip.spellcard.endTime=持续时间 
