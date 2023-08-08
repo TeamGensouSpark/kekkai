@@ -1,7 +1,20 @@
-item.spellcard.spellcard.kekkai.example_card.name=示例符卡
+item.spellcard.spellcard.kekkai.example_card.name=符卡：示例符卡
 spellcard.kekkai.example_card=示例符卡
 
-kekkai.tooltip.spellcard.level=Lv.
-kekkai.tooltip.spellcard.char=符卡持有者  
-kekkai.tooltip.spellcard.removeTime=无敌时间 
-kekkai.tooltip.spellcard.endTime=持续时间 
+kekkai.tooltip.spellcard.level=Lv. 
+kekkai.tooltip.spellcard.spellcard=符卡
+kekkai.tooltip.spellcard.char=符卡持有者 : 
+kekkai.tooltip.spellcard.name=符卡名称 : 
+kekkai.tooltip.spellcard.removeTime=无敌时间 : 
+kekkai.tooltip.spellcard.endTime=持续时间 : 
+
+touhouCharacter.name.MEGUMU_IIZUNAMARU=饭纲丸龙
+touhouCharacter.name.MARISA_KIRISAME=雾雨魔理沙
+touhouCharacter.name.YOUMU_KONPAKU=魂魄妖梦
+
+
+#Spellcard item names
+item.spellcard.spellcard.danmakucore.delusion_of_enlightenment.name=符卡：人神剑「俗谛常住」
+
+#Spellcard names
+spellcard.danmakucore.delusion_of_enlightenment=人神剑「俗谛常住」
