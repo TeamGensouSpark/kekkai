@@ -5,12 +5,12 @@ import net.katsstuff.teamnightclipse.danmakucore.danmaku.DanmakuState;
 import net.katsstuff.teamnightclipse.danmakucore.danmaku.DanmakuUpdate;
 import net.katsstuff.teamnightclipse.danmakucore.impl.subentity.SubEntityDefault;
 import net.katsstuff.teamnightclipse.mirror.data.Vector3;
-import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 
 public class TrackingTargetSubEntity extends SubEntityDefault {
     @Override
     public DanmakuUpdate subEntityTick(DanmakuState danmakuState) {
-        Entity target = KekkaiHelper.getTarget(danmakuState.shot());
+        EntityLivingBase target = KekkaiHelper.getSpellcardEntity(danmakuState.shot()).target().get();
         Vector3 newDirection;
         if (target != null) {
             newDirection = (Vector3) Vector3.directionToPos(danmakuState.pos(), new Vector3(target));

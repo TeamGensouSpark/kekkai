@@ -1,2 +1,7 @@
 item.spellcard.spellcard.kekkai.example_card.name=Example SpellCard
 spellcard.kekkai.example_card=Example SpellCard
+
+kekkai.tooltip.spellcard.level=Lv. 
+kekkai.tooltip.spellcard.char=User 
+kekkai.tooltip.spellcard.removeTime=Invincibility Time 
+kekkai.tooltip.spellcard.endTime=Duration 

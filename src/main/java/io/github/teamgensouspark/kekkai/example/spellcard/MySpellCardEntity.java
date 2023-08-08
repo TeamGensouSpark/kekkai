@@ -25,9 +25,9 @@ public class MySpellCardEntity extends SpellcardEntity {
             DanmakuCreationHelper.createRingShot(
                     DanmakuBuilder.getBuilderWithEntity(this.user())
                             .setDirection(Vector3.directionToEntity(user(), target().get()))
-                            .setShot(KekkaiHelper.setTarget(LibShotData.SHOT_MEDIUM
+                            .setShot(KekkaiHelper.setSpellcardEntity(LibShotData.SHOT_MEDIUM
                                     .setMainColor(AtomColors.ATOM_COLOR_GREEN)
-                                    .setSubEntity(KekkaiSubEntities.TRACKING), target().get()))
+                                    .setSubEntity(KekkaiSubEntities.TRACKING), this))
                             .build(),
                     3,
                     0,

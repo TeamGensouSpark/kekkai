@@ -1,23 +1,23 @@
 package io.github.teamgensouspark.kekkai.utils;
 
-import io.github.teamgensouspark.kekkai.interfaces.IContainsTarget;
+import io.github.teamgensouspark.kekkai.interfaces.IContainsSpellcardEntity;
 import net.katsstuff.teamnightclipse.danmakucore.data.AbstractShotData;
 import net.katsstuff.teamnightclipse.danmakucore.data.ShotData;
-import net.minecraft.entity.Entity;
+import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.SpellcardEntity;
 
 public class KekkaiHelper {
-    public static ShotData setTarget(ShotData shotData, Entity target) {
-        IContainsTarget ict_shotData = (IContainsTarget) (AbstractShotData) shotData;
-        return ict_shotData.setTarget(target);
+    public static ShotData setSpellcardEntity(ShotData shotData, SpellcardEntity spellcard) {
+        IContainsSpellcardEntity icse_shotData = (IContainsSpellcardEntity) (AbstractShotData) shotData;
+        return icse_shotData.setSpellcardEntity(spellcard);
     }
 
-    public static Entity getTarget(ShotData shotData) {
-        IContainsTarget ict_shotData = (IContainsTarget) (AbstractShotData) shotData;
-        return ict_shotData.getTarget();
+    public static SpellcardEntity getSpellcardEntity(ShotData shotData) {
+        IContainsSpellcardEntity icse_shotData = (IContainsSpellcardEntity) (AbstractShotData) shotData;
+        return icse_shotData.getSpellcardEntity();
     }
 
-    public static Boolean hasTarget(ShotData shotData) {
-        IContainsTarget ict_shotData = (IContainsTarget) (AbstractShotData) shotData;
-        return ict_shotData.hasTarget();
+    public static Boolean hasSpellcardEntity(ShotData shotData) {
+        IContainsSpellcardEntity icse_shotData = (IContainsSpellcardEntity) (AbstractShotData) shotData;
+        return icse_shotData.hasSpellcardEntity();
     }
 }

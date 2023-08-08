@@ -6,23 +6,30 @@ import java.util.Map;
 import org.spongepowered.asm.mixin.Mixin;
 
 import io.github.teamgensouspark.kekkai.interfaces.IContainsObjectMap;
-import io.github.teamgensouspark.kekkai.interfaces.IContainsTarget;
+import io.github.teamgensouspark.kekkai.interfaces.IContainsSpellcardEntity;
 import net.katsstuff.teamnightclipse.danmakucore.data.ShotData;
-import net.minecraft.entity.Entity;
+import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.SpellcardEntity;
 
 @Mixin(value = ShotData.class, remap = false)
-public abstract class MixinShotData implements IContainsTarget, IContainsObjectMap {
-    private Entity target = null;
+public abstract class MixinShotData implements IContainsSpellcardEntity, IContainsObjectMap {
+    private SpellcardEntity spellcard = null;
     private Map<String, Object> objMap = new HashMap<String, Object>();
 
-    public Entity getTarget() {
-        return target;
-    }
+    public SpellcardEntity getSpellcardEntity() {
+        return this.spellcard;
+    };
 
-    public ShotData setTarget(Entity target) {
-        this.target = target;
+    public ShotData setSpellcardEntity(SpellcardEntity spellcard) {
+        this.spellcard = spellcard;
         return (ShotData) (Object) this;
-    }
+    };
+
+    public Boolean hasSpellcardEntity() {
+        if (spellcard != null) {
+            return true;
+        }
+        return false;
+    };
 
     public Map<String, Object> getMap() {
         return objMap;
