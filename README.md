@@ -6,17 +6,17 @@
 
 ## Notice
 
-#### **If there is no danmakucore or mirror,there is no kekkai,remember to show the best respect to TeamNightclipse's staff when using!**
+#### **If there is no danmakucore or mirror,there will no kekkai,remember to show the respect to TeamNightclipse's staff when using!**
 
 ## What's this?
 
-It's a java lib for 1.12.2 Touhou Danmaku Developer
+It's a java lib for 1.12.2 Touhou Danmaku Developer,DanmakuCore was built in Scala,and it's so hard to build and publish a version now.
 
+Kekkai embed the danmakucore and mirror,and offer some API to use the DanmakuCore staff conveniently,also Kekkai do some patch to the danmakucore and expand the DanmakuCore.
 
+## Launch Game with Kekkai
 
-Kekkai will offer you some class or static method to execute the DanmakuCore or register a item/spellcard...
-
-### How to use
+####  Need the MixinBooter as dependence
 
 1. Install **Minecraft** and **Forge(1.12.2)**
 2. Download this mod from the repo
@@ -25,33 +25,20 @@ Kekkai will offer you some class or static method to execute the DanmakuCore or 
 
 ## Develop with Kekkai
 
-```groovy
-repositories {
-    maven {
-        name 'TGS-Kekkai Github Package'
-        url 'https://maven.pkg.github.com/TeamGensouSpark/kekkai'
-        credentials {
-            //you can use your Github account here too......
-            username = "H2Sxxa"
-            password = "ZSkEN3kdPWkMyllZc4OfE8gZWXrFV2ufYt2R_phg".reverse() //the token is read Github Package only
-        }
-    }
-}
+See our [Wiki](https://github.com/TeamGensouSpark/kekkai/wiki), unfortunately,I cant do the translation work and offer a English Version.
 
-dependencies {
-    implementation 'io.github.teamgensouspark.kekkai:kekkai:1.0-rc3' //change version yourself
-}
-```
+## Contribute to Kekkai
+
+You can contribute to our wiki/lang/... Also , if you can offer some codes or build some model, I will appreciate.
+
 ## Help & Improvement
 
-You can use the issue to give me your idea,don't mind,if I have time,I will reply.
+You can use the issue to give me your idea,never mind,if I have time,I will reply.
 
 对于国内用户欢迎加入QQ群752204159谢谢喵~
 
 ## Credits
 
-https://github.com/TeamNightclipse/DanmakuCore
-
-https://github.com/TeamNightclipse/Mirror
-
-https://github.com/TeamGensouSpark/LunarCapitalFramework
+ - https://github.com/TeamNightclipse/DanmakuCore
+ - https://github.com/TeamNightclipse/Mirror
+ - https://github.com/TeamGensouSpark/LunarCapitalFramework
