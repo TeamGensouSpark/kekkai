@@ -2,12 +2,10 @@ package io.github.teamgensouspark.kekkai;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
 import io.github.teamgensouspark.kekkai.example.spellcard.MySpellCards;
-import io.github.teamgensouspark.kekkai.proxy.CommonProxy;
 import io.github.teamgensouspark.kekkai.spellcard.SpellCardModelHelper;
 import io.github.teamgensouspark.kekkai.utils.KekkaiRegister;
 import io.github.teamgensouspark.kekkai.utils.ModResource;
@@ -23,8 +21,6 @@ public class Kekkai {
     
     public static ModResource resource = new ModResource(Consts.MODID);
 
-    @SidedProxy(clientSide = "io.github.teamgensouspark.kekkai.proxy.ClientProxy", serverSide = "io.github.teamgensouspark.kekkai.proxy.CommonProxy")
-    public static CommonProxy proxy;
     @EventHandler
     public static void PreInit(FMLPreInitializationEvent event)
     {
