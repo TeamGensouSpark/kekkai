@@ -14,7 +14,7 @@ It's a java lib for 1.12.2 Touhou Danmaku Developer,DanmakuCore was built in Sca
 
 Kekkai embed the danmakucore and mirror,and offer some API to use the DanmakuCore staff conveniently,also Kekkai do some patch to the danmakucore and expand the DanmakuCore.
 
-### How to use
+## Launch Game with Kekkai
 
 ####  Need the MixinBooter as dependence
 
