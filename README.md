@@ -1,4 +1,3 @@
-
 <div align=center>
   <img width=200 src="./doc/kekkai.png"  alt="image"/>
   <h1 align="center">Kekkai</h1> 
@@ -6,19 +5,21 @@
 
 ## Notice
 
-#### **If there is no danmakucore or mirror, there will be no kekkai. Remember to show respect to TeamNightclipse's staff when using!**
+#### **If there are no Danmakucore and Mirror, there will be no Kekkai.If there are no Danmakucore and Mirror, there will be no Kekkai. Remember to show respect to the staff of TeamNightclipse when using!**
 
 ## What is Kekki?
 
-Kekkai is a library mod written in Java for 1.12.2 Touhou Danmaku Developer. DanmakuCore was built in Scala, and it is currently difficult to build and publish a version.
+Kekkai is a library mod for Touhou Danmaku Developer.
 
-Kekkai embeds the DanmakuCore and Mirror, and offers some API to conveniently use the DanmakuCore staff. Additionally, Kekkai patches the DanmakuCore and expands its functionality.
+Kekkai embeds the DanmakuCore and Mirror, and offers API to conveniently use the DanmakuCore to develop, so you can easily register a spellcard or danmaku.
+
+Additionally, Kekkai patches the DanmakuCore and expands its functionality.
 
 ## Launch Game with Kekkai
 
 #### Need the MixinBooter as a dependency
 
-1. Install **Minecraft** and **Forge (1.12.2)**.
+1. Install **Minecraft** and **Forge**
 
 2. Download this mod
 
@@ -28,14 +29,19 @@ Kekkai embeds the DanmakuCore and Mirror, and offers some API to conveniently us
 
 ## Develop with Kekkai
 
-See our [Wiki](https://github.com/TeamGensouSpark/kekkai/wiki). Unfortunately, I can't do the translation work and offer an English version.
+Learn more on our [Wiki](https://github.com/TeamGensouSpark/kekkai/wiki).
+
+Unfortunately, I can't do the translation work and offer an English version.
 
 ## Contribute to Kekkai
 
-Feel free to contribute to our wiki, Code.
+Feel free to contribute to our Wiki, Code.
 
 ## Credits
 
 - [DanmakuCore](https://github.com/TeamNightclipse/DanmakuCore)
+
 - [Mirror](https://github.com/TeamNightclipse/Mirror)
+
 - [LunarCapitalFramework](https://github.com/TeamGensouSpark/LunarCapitalFramework)
+
