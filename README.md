@@ -40,8 +40,6 @@ Feel free to contribute to our Wiki, Code.
 ## Credits
 
 - [DanmakuCore](https://github.com/TeamNightclipse/DanmakuCore)
-
 - [Mirror](https://github.com/TeamNightclipse/Mirror)
-
 - [LunarCapitalFramework](https://github.com/TeamGensouSpark/LunarCapitalFramework)
 
