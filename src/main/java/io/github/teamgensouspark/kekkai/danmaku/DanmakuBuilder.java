@@ -10,7 +10,7 @@ public class DanmakuBuilder {
     }
 
     public static Builder getBuilderWithEntity(EntityLivingBase entity) {
-        return DanmakuTemplate.builder().setUser(entity).setWorld(entity.world);
+        return getBuilder().setUser(entity).setWorld(entity.world);
     }
-    
+
 }

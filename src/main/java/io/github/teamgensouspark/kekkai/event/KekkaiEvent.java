@@ -3,7 +3,7 @@ package io.github.teamgensouspark.kekkai.event;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.teamgensouspark.kekkai.Consts;
+import io.github.teamgensouspark.kekkai.KekkaiModInfo;
 import io.github.teamgensouspark.kekkai.utils.KekkaiI18n;
 import net.katsstuff.teamnightclipse.danmakucore.data.ShotData;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
@@ -22,7 +22,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@EventBusSubscriber(modid = Consts.MODID)
+@EventBusSubscriber(modid = KekkaiModInfo.MODID)
 public class KekkaiEvent {
     @SideOnly(Side.CLIENT)
     @SubscribeEvent(priority = EventPriority.HIGHEST)

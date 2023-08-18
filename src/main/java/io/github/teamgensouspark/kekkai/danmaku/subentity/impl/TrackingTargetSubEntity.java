@@ -5,26 +5,23 @@ import net.katsstuff.teamnightclipse.danmakucore.danmaku.DanmakuState;
 import net.katsstuff.teamnightclipse.danmakucore.danmaku.DanmakuUpdate;
 import net.katsstuff.teamnightclipse.danmakucore.impl.subentity.SubEntityDefault;
 import net.katsstuff.teamnightclipse.mirror.data.Vector3;
-import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.Entity;
 
 public class TrackingTargetSubEntity extends SubEntityDefault {
     @Override
-    public DanmakuUpdate subEntityTick(DanmakuState danmakuState) {
-        EntityLivingBase target;
-        // BUG the server and client different performance here
+    public DanmakuUpdate subEntityTick(DanmakuState danmaku) {
+        Vector3 newDirection = danmaku.direction();
         try {
-            target = KekkaiHelper.getSpellcardEntity(danmakuState.shot()).target().get();
+            Entity entity = KekkaiHelper.getTargetWithDanmakuState(danmaku);
+            if (entity != null) {
+                if (entity.getDistance(danmaku.pos().x(), danmaku.pos().y(), danmaku.pos().z()) > 4) {
+                    newDirection = (Vector3) Vector3.directionToPos(danmaku.pos(), new Vector3(entity));
+                }
+            }
         } catch (Exception e) {
-            return super.subEntityTick(danmakuState);
-        }
-        Vector3 newDirection;
-        if (target != null) {
-            newDirection = (Vector3) Vector3.directionToPos(danmakuState.pos(), new Vector3(target));
-        } else {
-            newDirection = danmakuState.direction();
+            System.out.println(e.toString());
         }
         return super.subEntityTick(
-                danmakuState.copy(danmakuState.entity().setDirection(newDirection), danmakuState.extra(),
-                        danmakuState.tracking()));
+                danmaku.copy(danmaku.entity().setDirection(newDirection), danmaku.extra(), danmaku.tracking()));
     }
 }

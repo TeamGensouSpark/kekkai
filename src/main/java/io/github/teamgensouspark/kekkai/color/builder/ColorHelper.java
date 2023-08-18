@@ -13,7 +13,7 @@ public class ColorHelper {
         this.random = new Random();
     }
 
-    public List<Integer> getColors(){
+    public List<Integer> getColors() {
         return color_collection;
     }
 
@@ -29,7 +29,9 @@ public class ColorHelper {
     }
 
     public int registColorfromHex(String hex) {
-        return Color.decode(hex).getRGB();
+        int color = Color.decode(hex).getRGB();
+        this.color_collection.add(color);
+        return color;
     }
 
     public int randomColor() {
