@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.github.teamgensouspark.kekkai.KekkaiModInfo;
+import io.github.teamgensouspark.kekkai.enums.EnumTouhouType;
+import io.github.teamgensouspark.kekkai.utils.KekkaiHelper;
 import io.github.teamgensouspark.kekkai.utils.KekkaiI18n;
 import net.katsstuff.teamnightclipse.danmakucore.data.ShotData;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
@@ -12,9 +14,13 @@ import net.katsstuff.teamnightclipse.danmakucore.item.ItemSpellcard;
 import net.katsstuff.teamnightclipse.danmakucore.item.ItemDanmaku.Pattern;
 import net.katsstuff.teamnightclipse.danmakucore.lib.LibColor;
 import net.katsstuff.teamnightclipse.danmakucore.lib.data.LibSubEntities;
+import net.katsstuff.teamnightclipse.danmakucore.scalastuff.TouhouHelper;
 import net.katsstuff.teamnightclipse.mirror.data.Vector3;
 import net.minecraft.client.resources.I18n;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
@@ -102,6 +108,23 @@ public class KekkaiEvent {
 
             origin.clear();
             origin.addAll(rebuild);
+        }
+    }
+
+    @SubscribeEvent
+    public static void dropPower(LivingDeathEvent event) {
+        EntityLivingBase living = event.getEntityLiving();
+        if (!living.isNonBoss() || living instanceof EntityPlayer) {
+            if (!living.world.isRemote) {
+                int max = KekkaiModInfo.RND.nextInt(4);
+                for (int i = 0; i < max; i++) {
+                    KekkaiHelper
+                            .spawnTouhouType(living.world, new Vector3(living),
+                                    (Vector3) Vector3.directionToPos(new Vector3(living),
+                                            (new Vector3(event.getSource().getImmediateSource()))),
+                                    EnumTouhouType.POWER);
+                }
+            }
         }
     }
 }
