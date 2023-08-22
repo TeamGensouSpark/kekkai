@@ -5,6 +5,7 @@ import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
+import io.github.teamgensouspark.kekkai.config.KekkaiKeyBindings;
 import io.github.teamgensouspark.kekkai.example.spellcard.MySpellCards;
 import io.github.teamgensouspark.kekkai.spellcard.SpellCardModelHelper;
 import io.github.teamgensouspark.kekkai.utils.ModResource;
@@ -20,5 +21,6 @@ public class Kekkai {
         logger = event.getModLog();
         SpellCardModelHelper.initSpellCardBake();
         MySpellCards.initSpellCard();
+        KekkaiKeyBindings.initKeyBindings();
     }
 }

@@ -5,7 +5,7 @@
 
 ## Notice
 
-#### **If there are no Danmakucore and Mirror, there will be no Kekkai.If there are no Danmakucore and Mirror, there will be no Kekkai. Remember to show respect to the staff of TeamNightclipse when using!**
+#### **If there are no Danmakucore and Mirror, there will be no Kekkai. Remember to show respect to the staff of TeamNightclipse when using!**
 
 ## What is Kekki?
 

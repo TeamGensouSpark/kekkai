@@ -26,6 +26,8 @@ item.spellcard.spellcard.danmakucore.delusion_of_enlightenment.name=符卡：人
 #Spellcard names
 spellcard.danmakucore.delusion_of_enlightenment=人神剑「俗谛常住」
 
+key.category.kekkai=结界
+key.kekkai.hidehud=隐藏HUD
 
 # DanmakuCore ALL
 touhouCharacter.name.MARISA_KIRISAME=雾雨魔理沙
