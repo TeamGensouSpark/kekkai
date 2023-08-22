@@ -13,7 +13,7 @@ public class MySpellCards {
     public static void initSpellCard() {
     };
 
-    public static final Spellcard EXAMPLE_CARD = new SpellCardBase<>("example_card",
+    public static final Spellcard EXAMPLE_CARD = new SpellCardBase<MySpellCardEntity>("example_card",
             MySpellCardEntity.class,
             TouhouExCharacter.MEGUMU_IIZUNAMARU);
 
