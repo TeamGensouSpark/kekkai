@@ -22,7 +22,7 @@ public class ScalaJ {
         return DanCoreJavaHelper.optional(option);
     }
 
-    public static <T> Option<T> optionNone() {
+    public static <T> Option<T> none() {
         return DanCoreJavaHelper.none();
     }
 

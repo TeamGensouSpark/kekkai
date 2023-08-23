@@ -2,7 +2,6 @@ package io.github.teamgensouspark.kekkai.config;
 
 import org.lwjgl.input.Keyboard;
 
-import io.github.teamgensouspark.kekkai.Kekkai;
 import io.github.teamgensouspark.kekkai.KekkaiModInfo;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.client.settings.KeyConflictContext;
