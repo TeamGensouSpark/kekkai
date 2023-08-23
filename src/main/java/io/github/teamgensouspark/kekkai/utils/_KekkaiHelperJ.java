@@ -11,7 +11,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 /*
  * DO NOT USE THIS CLASS DIRECTLY.
- * The {@link KekkaiHelper} will extend this.
+ * The {@link KekkaiHelper} will extends this.
  */
 public abstract class _KekkaiHelperJ {
     @SideOnly(Side.SERVER)

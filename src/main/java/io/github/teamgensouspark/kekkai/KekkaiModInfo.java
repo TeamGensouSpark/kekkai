@@ -1,6 +1,6 @@
 package io.github.teamgensouspark.kekkai;
 
-import scala.util.Random;
+import java.util.Random;
 
 public class KekkaiModInfo {
     public static final String MODID = "kekkai";

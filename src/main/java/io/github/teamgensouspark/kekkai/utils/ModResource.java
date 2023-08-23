@@ -17,4 +17,6 @@ public class ModResource {
         return this.getResource(path.concat(".png"));
     }
 
+    
+
 }
