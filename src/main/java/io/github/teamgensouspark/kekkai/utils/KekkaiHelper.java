@@ -16,7 +16,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import scala.Option;
 
-public class KekkaiHelper {
+public class KekkaiHelper extends _KekkaiHelperJ {
     public static @Nullable Entity getTargetWithDanmakuState(DanmakuState danmaku) {
         if (danmaku.user().nonEmpty()) {
             NBTTagCompound nbt = danmaku.user().get().getEntityData();
@@ -90,11 +90,12 @@ public class KekkaiHelper {
         }
         return entity;
     }
+
     public static void spawnTouhouScore(World world, Option<Entity> target, Vector3 pos,
             Vector3 direction,
             @Nullable EnumTouhouScore type) {
         if (!world.isRemote) {
-            world.spawnEntity(getTouhouScoreEntity(world,target, pos, direction, type));
+            world.spawnEntity(getTouhouScoreEntity(world, target, pos, direction, type));
         }
     }
 }

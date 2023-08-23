@@ -2,15 +2,13 @@ package io.github.teamgensouspark.kekkai.color.builder;
 
 import java.awt.Color;
 import java.util.List;
-import java.util.Random;
+import io.github.teamgensouspark.kekkai.utils.KekkaiUtils;
 
 public class ColorHelper {
     private List<Integer> color_collection;
-    private Random random;
 
     public ColorHelper(List<Integer> color_collection) {
         this.color_collection = color_collection;
-        this.random = new Random();
     }
 
     public List<Integer> getColors() {
@@ -35,7 +33,7 @@ public class ColorHelper {
     }
 
     public int randomColor() {
-        return color_collection.get(random.nextInt(color_collection.size()));
+        return KekkaiUtils.randomfromList(color_collection);
     }
 
     // static

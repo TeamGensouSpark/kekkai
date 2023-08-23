@@ -16,5 +16,4 @@ public class KekkaiRegister {
         REG_SUBENTITYTYPE = GameRegistry.findRegistry(SubEntityType.class);
         REG_FORMS = GameRegistry.findRegistry(Form.class);
     }
-
 }
