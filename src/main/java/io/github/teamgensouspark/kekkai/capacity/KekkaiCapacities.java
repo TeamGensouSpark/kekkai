@@ -5,8 +5,8 @@ import java.util.function.Consumer;
 import javax.annotation.Nullable;
 
 import io.github.teamgensouspark.kekkai.enums.EnumTouhouCapacity;
+import io.github.teamgensouspark.kekkai.utils.KekkaiHelper;
 import net.katsstuff.teamnightclipse.danmakucore.capability.dancoredata.IDanmakuCoreData;
-import net.katsstuff.teamnightclipse.danmakucore.javastuff.TouhouHelper;
 import net.minecraft.entity.player.EntityPlayer;
 
 public class KekkaiCapacities {
@@ -17,11 +17,11 @@ public class KekkaiCapacities {
     }
 
     public IDanmakuCoreData getDanmakuCoreData() {
-        return TouhouHelper.getDanmakuCoreData(player).orElseGet(null);
+        return KekkaiHelper.getDanmakuCoreData(player);
     }
 
     public KekkaiCapacities getSyncPlayer(Consumer<IDanmakuCoreData> consumer) {
-        TouhouHelper.changeAndSyncPlayerData(consumer, player);
+        KekkaiHelper.changeAndSyncPlayerData(consumer, player);
         return this;
     }
 

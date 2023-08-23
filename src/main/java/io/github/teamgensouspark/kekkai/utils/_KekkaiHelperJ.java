@@ -6,6 +6,7 @@ import net.katsstuff.teamnightclipse.danmakucore.capability.dancoredata.IDanmaku
 import net.katsstuff.teamnightclipse.danmakucore.javastuff.TouhouHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -22,5 +23,9 @@ public abstract class _KekkaiHelperJ {
     @SideOnly(Side.SERVER)
     public static void changeAndSyncPlayerData(Consumer<IDanmakuCoreData> operator, EntityPlayer target) {
         TouhouHelper.changeAndSyncPlayerData(operator, target);
+    }
+
+    public static IDanmakuCoreData getDanmakuCoreData(ICapabilityProvider provider) {
+        return TouhouHelper.getDanmakuCoreData(provider).orElseGet(null);
     }
 }
