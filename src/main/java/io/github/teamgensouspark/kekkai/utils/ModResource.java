@@ -1,5 +1,6 @@
 package io.github.teamgensouspark.kekkai.utils;
 
+import io.github.teamgensouspark.kekkai.Kekkai;
 import net.minecraft.util.ResourceLocation;
 
 public class ModResource {

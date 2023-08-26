@@ -2,6 +2,7 @@ package io.github.teamgensouspark.kekkai.danmaku;
 
 import net.katsstuff.teamnightclipse.danmakucore.danmaku.DanmakuTemplate;
 import net.katsstuff.teamnightclipse.danmakucore.danmaku.DanmakuTemplate.Builder;
+import net.katsstuff.teamnightclipse.danmakucore.data.ShotData;
 import net.minecraft.entity.EntityLivingBase;
 
 public class DanmakuBuilder {
@@ -11,6 +12,10 @@ public class DanmakuBuilder {
 
     public static Builder getBuilderWithEntity(EntityLivingBase entity) {
         return getBuilder().setUser(entity).setWorld(entity.world);
+    }
+
+    public static ShotData getDefaulShotData() {
+        return ShotData.DefaultShotData();
     }
 
 }
