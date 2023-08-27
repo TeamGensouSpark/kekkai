@@ -30,6 +30,26 @@ public class KekkaiColor {
         return String.format("#%02X%02X%02X", rgb.getRed(), rgb.getGreen(), rgb.getBlue());
     }
 
+    public int red() {
+        Color rgb = new Color(getRGB());
+        return rgb.getRed();
+    }
+
+    public int green() {
+        Color rgb = new Color(getRGB());
+        return rgb.getGreen();
+    }
+
+    public int blue() {
+        Color rgb = new Color(getRGB());
+        return rgb.getBlue();
+    }
+
+    public int alpha() {
+        Color rgb = new Color(getRGB());
+        return rgb.getAlpha();
+    }
+
     public static KekkaiColor fromRGB(int red, int green, int blue) {
         return new KekkaiColor(new Color(red, green, blue));
     }
