@@ -11,7 +11,7 @@ public class TouhouExCharacter {
                         TouhouSpecies.GOD);
         public static final TouhouCharacter YORIGAMI_SISTERS = TouhouCharacter.getOrCreate("YORIGAMI_SISTERS",
                         "yorigamiSisters",
-                        new TouhouCharacter[] { SHION_YORIGAMI, JYOON_YORIGAMI });
+                        SHION_YORIGAMI, JYOON_YORIGAMI);
         // th16
         public static final TouhouCharacter LARVA_ETERNITY = TouhouCharacter.getOrCreate("LARVA_ETERNITY", "larva",
                         TouhouExSpecies.FAIRY_SWALLOWTAIL);
@@ -65,4 +65,16 @@ public class TouhouExCharacter {
                         TouhouSpecies.GOD);
         public static final TouhouCharacter MOMOYO_HIMEMUSHI = TouhouCharacter.getOrCreate("MOMOYO_HIMEMUSHI", "momoyo",
                         TouhouExSpecies.YOUKAI_OOMUKADE);
+
+        // th19
+        public static final TouhouCharacter BITEN_SON = TouhouCharacter.getOrCreate("BITEN_SON", "biten",
+                        TouhouExSpecies.YOUKAI_SARUGAMI);
+        public static final TouhouCharacter ENOKO_MITSUGASHIRA = TouhouCharacter.getOrCreate("ENOKO_MITSUGASHIRA",
+                        "enoko", TouhouSpecies.YOUKAI_BEAST_WOLF);
+        public static final TouhouCharacter CHIYARI_TENKAJIN = TouhouCharacter.getOrCreate("CHIYARI_TENKAJIN",
+                        "chiyari", TouhouExSpecies.TENKAJIN);
+        public static final TouhouCharacter HISAMI_YOMOTSU = TouhouCharacter.getOrCreate("HISAMI_YOMOTSU",
+                        "hisami", TouhouExSpecies.YOMOTSU_SHIKOME);
+        public static final TouhouCharacter ZANMU_NIPPAKU = TouhouCharacter.getOrCreate("ZANMU_NIPPAKU",
+                        "zanmu", TouhouSpecies.HUMAN, TouhouSpecies.YOUKAI_ONI);
 }
