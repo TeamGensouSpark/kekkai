@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.github.teamgensouspark.kekkai.KekkaiModInfo;
+import io.github.teamgensouspark.kekkai.config.KekkaiConfig;
 import io.github.teamgensouspark.kekkai.enums.EnumTouhouCapacity;
 import io.github.teamgensouspark.kekkai.utils.KekkaiHelper;
 import io.github.teamgensouspark.kekkai.utils.KekkaiI18n;
@@ -112,6 +113,9 @@ public class KekkaiEvent {
 
     @SubscribeEvent
     public static void dropPower(LivingDeathEvent event) {
+        if (!KekkaiConfig.dropPower) {
+            return;
+        }
         EntityLivingBase living = event.getEntityLiving();
         if (!living.isNonBoss() || living instanceof EntityPlayer) {
             if (!living.world.isRemote) {

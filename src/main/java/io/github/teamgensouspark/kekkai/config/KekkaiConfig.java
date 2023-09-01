@@ -6,4 +6,5 @@ import net.minecraftforge.common.config.Config;
 @Config(modid = KekkaiModInfo.MODID)
 public class KekkaiConfig {
     public static boolean showDanData = true;
+    public static boolean dropPower = false;
 }
