@@ -46,7 +46,7 @@ public class SpellCardBase<T extends SpellcardEntity> extends Spellcard {
         return this.level;
     }
 
-    public Spellcard setlevel(int level) {
+    public SpellCardBase<T> setlevel(int level) {
         this.level = level;
         return this;
     }
@@ -56,7 +56,7 @@ public class SpellCardBase<T extends SpellcardEntity> extends Spellcard {
         return this.removeTime;
     }
 
-    public Spellcard setremoveTime(int removeTime) {
+    public SpellCardBase<T> setremoveTime(int removeTime) {
         this.removeTime = removeTime;
         return this;
     }
@@ -66,7 +66,7 @@ public class SpellCardBase<T extends SpellcardEntity> extends Spellcard {
         return this.endTime;
     }
 
-    public Spellcard setendTime(int endTime) {
+    public SpellCardBase<T> setendTime(int endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -76,8 +76,17 @@ public class SpellCardBase<T extends SpellcardEntity> extends Spellcard {
         return this.character;
     }
 
-    public Spellcard setTouhouUser(TouhouCharacter character) {
+    public SpellCardBase<T> setTouhouUser(TouhouCharacter character) {
         this.character = character;
         return this;
     }
+
+    public Spellcard toSpellcard(){
+        return this;
+    }
+
+    public Class<T> getSpellcardEntity(){
+        return spellcard;
+    }
+
 }
