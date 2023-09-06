@@ -29,7 +29,6 @@ public class SpellCardBase<T extends SpellcardEntity> extends Spellcard {
         try {
             Constructor<T> constructor = this.spellcard.getDeclaredConstructor(Spellcard.class, EntitySpellcard.class,
                     Option.class);
-            constructor.setAccessible(true);
             return constructor.newInstance(this, entitySpellcard, target);
         } catch (Exception e) {
             Kekkai.logger.error("Reflect Failed");
