@@ -1,6 +1,8 @@
 package io.github.teamgensouspark.kekkai.color.builder;
 
 import java.awt.Color;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 import io.github.teamgensouspark.kekkai.utils.KekkaiUtils;
 
@@ -9,6 +11,10 @@ public class ColorHelper {
 
     public ColorHelper(List<Integer> color_collection) {
         this.color_collection = color_collection;
+    }
+
+    public ColorHelper(Integer... colors) {
+        this.color_collection = Arrays.asList(colors);
     }
 
     public List<Integer> getColors() {
@@ -34,6 +40,10 @@ public class ColorHelper {
 
     public int randomColor() {
         return KekkaiUtils.randomfromList(color_collection);
+    }
+
+    public Iterator<Integer> iterator() {
+        return color_collection.iterator();
     }
 
     // static
