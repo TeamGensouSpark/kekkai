@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @EventBusSubscriber(modid = KekkaiModInfo.MODID)
-public class HanderDeclear {
+public class DeclearBus {
     public static List<String> SPELLCARD_PACKAGES = new ArrayList<>();
 
     @SubscribeEvent

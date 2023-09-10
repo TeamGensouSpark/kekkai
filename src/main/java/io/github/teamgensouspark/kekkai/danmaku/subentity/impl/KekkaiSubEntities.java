@@ -9,10 +9,13 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @EventBusSubscriber(modid = KekkaiModInfo.MODID)
 public class KekkaiSubEntities {
-    public static final SubEntityType TRACKING = new SubEntityBase<TrackingTargetSubEntity>("tracking_target", TrackingTargetSubEntity.class);
+    public static final SubEntityType TRACKING = new SubEntityBase<TrackingTargetSubEntity>("tracking_target",
+            TrackingTargetSubEntity.class);
+    public static final SubEntityType TOSELF = new SubEntityBase<ShotToSelfSubEntity>("shot_to_self",
+            ShotToSelfSubEntity.class);
 
     @SubscribeEvent
     public static void onSubEntityRegister(RegistryEvent.Register<SubEntityType> event) {
-        event.getRegistry().registerAll(TRACKING);
+        event.getRegistry().registerAll(TRACKING, TOSELF);
     }
 }
