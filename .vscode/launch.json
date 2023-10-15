@@ -1,0 +1,91 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "GradleStart",
+            "request": "launch",
+            "mainClass": "GradleStart",
+            "projectName": "kekkai"
+        },
+        {
+            "type": "java",
+            "name": "GradleStartServer",
+            "request": "launch",
+            "mainClass": "GradleStartServer",
+            "projectName": "kekkai"
+        },
+        {
+            "type": "java",
+            "name": "Player",
+            "request": "launch",
+            "mainClass": "ibxm.Player",
+            "projectName": "kekkai"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "net.minecraft.client.main.Main",
+            "projectName": "kekkai"
+        },
+        {
+            "type": "java",
+            "name": "MinecraftServer",
+            "request": "launch",
+            "mainClass": "net.minecraft.server.MinecraftServer",
+            "projectName": "kekkai"
+        },
+        {
+            "type": "java",
+            "name": "AccessTransformer",
+            "request": "launch",
+            "mainClass": "net.minecraftforge.fml.common.asm.transformers.AccessTransformer",
+            "projectName": "kekkai"
+        },
+        {
+            "type": "java",
+            "name": "MarkerTransformer",
+            "request": "launch",
+            "mainClass": "net.minecraftforge.fml.common.asm.transformers.MarkerTransformer",
+            "projectName": "kekkai"
+        },
+        {
+            "type": "java",
+            "name": "GenDiffSet",
+            "request": "launch",
+            "mainClass": "net.minecraftforge.fml.common.patcher.GenDiffSet",
+            "projectName": "kekkai"
+        },
+        {
+            "type": "java",
+            "name": "ServerLaunchWrapper",
+            "request": "launch",
+            "mainClass": "net.minecraftforge.fml.relauncher.ServerLaunchWrapper",
+            "projectName": "kekkai"
+        },
+        {
+            "type": "java",
+            "name": "Delta",
+            "request": "launch",
+            "mainClass": "net.minecraftforge.fml.repackage.com.nothome.delta.Delta",
+            "projectName": "kekkai"
+        },
+        {
+            "type": "java",
+            "name": "GDiffPatcher",
+            "request": "launch",
+            "mainClass": "net.minecraftforge.fml.repackage.com.nothome.delta.GDiffPatcher",
+            "projectName": "kekkai"
+        }
+    ]
+}

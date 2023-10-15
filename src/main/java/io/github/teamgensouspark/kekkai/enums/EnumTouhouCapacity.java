@@ -5,5 +5,5 @@ public enum EnumTouhouCapacity {
     BIGPOWER,
     LIFE,
     BOMB,
-    SCORE //Can not spawn Entity, use {@link EnumTouhouScore}
+    SCORE // Can not spawn Entity, use {@link EnumTouhouScore}
 }

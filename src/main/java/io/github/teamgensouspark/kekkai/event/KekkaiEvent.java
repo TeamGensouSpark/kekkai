@@ -17,6 +17,7 @@ import net.katsstuff.teamnightclipse.danmakucore.lib.LibColor;
 import net.katsstuff.teamnightclipse.danmakucore.lib.data.LibSubEntities;
 import net.katsstuff.teamnightclipse.mirror.data.Vector3;
 import net.minecraft.client.resources.I18n;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -120,12 +121,15 @@ public class KekkaiEvent {
         if (!living.isNonBoss() || living instanceof EntityPlayer) {
             if (!living.world.isRemote) {
                 int max = KekkaiModInfo.RND.nextInt(4);
-                for (int i = 0; i < max; i++) {
-                    KekkaiHelper
-                            .spawnTouhouCapacity(living.world, new Vector3(living),
-                                    (Vector3) Vector3.directionToPos(new Vector3(living),
-                                            (new Vector3(event.getSource().getImmediateSource()))),
-                                    EnumTouhouCapacity.POWER);
+                Entity source = event.getSource().getImmediateSource();
+                if (source != null) {
+                    for (int i = 0; i < max; i++) {
+                        KekkaiHelper
+                                .spawnTouhouCapacity(living.world, new Vector3(living),
+                                        (Vector3) Vector3.directionToPos(new Vector3(living),
+                                                (new Vector3(source))),
+                                        EnumTouhouCapacity.POWER);
+                    }
                 }
             }
         }
