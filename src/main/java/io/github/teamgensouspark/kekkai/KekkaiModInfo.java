@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class KekkaiModInfo {
     public static final String MODID = "kekkai";
-    public static final String VERSION = "1.2.1";
+    public static final String VERSION = "1.2.2";
     public static final String NAME = "Kekkai";
 
     public static final String COMMON_PROXY = "io.github.teamgensouspark.kekkai.proxy.CommonProxy";
